@@ -1,4 +1,4 @@
-package com.kfpu.itis.testtestinterface;
+package ru.kpfu.itis.alliance;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("com.kfpu.itis.testtestinterface", appContext.getPackageName());
+        assertEquals("ru.kpfu.itis.alliance", appContext.getPackageName());
     }
 }

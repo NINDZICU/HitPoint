@@ -1,3 +1,38 @@
 <resources>
-    <string name="app_name">TestTestInterface</string>
+    <string name="app_name">Альянс</string>
+    <string name="logo">Логотип</string>
+    <string name="calculate">Рассчитать</string>
+    <string name="company_info">О компании</string>
+    <string name="object">Объект</string>
+    <string name="name">Название</string>
+    <string name="who_are_you">Кто вы?</string>
+    <string name="type_of_cladding">Вид облицовки</string>
+    <string name="wall_perimeter">Периметр стен</string>
+    <string name="building_height">Высота здания</string>
+    <string name="door_way">Проемы</string>
+    <string name="square_window">Площадь окна </string>
+    <string name="quantity_window">Кол-во окон</string>
+    <string name="square_door">Площадь двери</string>
+    <string name="quantity_door">Кол-во дверей</string>
+    <string name="contacts_text">Контакты</string>
+    <string name="number_of_phone">Номер телефона</string>
+    <string name="email">Email</string>
+    <string name="info">Ведущий разработчик комплексных решений в области вентилируемых и светопрозрачных конструкций, представляет производство и проектирование-систем навесных вентилируемых фасадов, комплектацию-облицовочных-материалов (металлокассеты, алюмокомпозит, керамогранит), минерального базальтового утеплителя, крепежа. Наши специалисты осуществляют полный комплекс фасадных работ от расчета, проектирования и согласования состава элементов вентилируемых фасадов до сдачи объекта в эксплуатацию, согласование технической документации, шеф-монтажа вентилируемых фасадов, технического и авторского надзора строительных объектов. Монтажное подразделение группы объединило устройство НВФ, светопрозрачных алюминиевых конструкций, кровли и водостока.</string>
+    <string name="contacts">Эл.почта : info@afkon.ru , Телефоны : + 7 (843) 203-37-67, 245-36-86</string>
+    <string name="toSite">Перейти на сайт</string>
+    <string name="title_activity_calculate">CalculateActivity</string>
+    <string name="composit">Композит</string>
+    <string name="keramogranit">Керамогранит</string>
+    <string name="fibroplita">Фиброплита</string>
+    <string name="metallokaseta">Металлокасета</string>
+    <string name="designer">Проектировщик</string>
+    <string name="executor">Исполнитель</string>
+    <string name="customer">Заказчик</string>
+    <string name="private_person">Частное лицо</string>
+
+    <string name="count_materials">Количество материалов: </string>
+    <string name="output_result">Вывод рассчёта</string>
+    <string name="calculate_again">Рассчитать ещё один объект</string>
+    <string name="confident">Политика конфиденциальности</string>
+    <string name="nameOfObject">Название объекта</string>
 </resources>

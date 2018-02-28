@@ -1,4 +1,4 @@
-package com.kfpu.itis.testtestinterface;
+package ru.kpfu.itis.alliance;
 
 import org.junit.Test;
 
