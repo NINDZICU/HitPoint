@@ -5,8 +5,17 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
+import android.text.Layout;
+import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
+import android.view.ViewParent;
 import android.widget.Button;
+import android.widget.LinearLayout;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import ru.kpfu.itis.alliance.R;
 
@@ -49,6 +58,28 @@ public class MainActivity extends AppCompatActivity {
                 finish();
             }
         });
+
+        final View viewElement = getLayoutInflater().inflate(R.layout.activity_main, null, false);
+        ViewParent viewParent = getWindow().getDecorView().findViewById(android.R.id.content);
+        LayoutInflater layoutInflater = getLayoutInflater();
+
+        final ViewGroup viewGroup = (ViewGroup) ((ViewGroup) this.findViewById(android.R.id.content)).getChildAt(0);// вью этого класса
+        List<View> views3 = new ArrayList<>();
+        for (int i = 0; i < viewGroup.getChildCount(); i++) {
+            views3.add(viewGroup.getChildAt(i));
+            Log.d("TAG", String.valueOf(viewGroup.getChildAt(i) instanceof LinearLayout));
+        }
+
+//        Layout layout = findViewById(R.layout.activity_main);
+
+        List<View> views = viewElement.getTouchables();
+        List<View> views1 = viewElement.getFocusables(0);
+        for (View view : views) {
+            System.out.println("BULAT  " + view.getId());
+        }
+        for (View view : views1) {
+            System.out.println("BULAT1  " + view.getId());
+        }
     }
 
 

@@ -51,6 +51,7 @@ public class ResultAcitivity extends AppCompatActivity {
         List<View> elements = new ArrayList<>();
         for (CalculationResult calculationResult : calculationResults) {
             final View viewElement = getLayoutInflater().inflate(R.layout.result_element, null, false);
+
             TextView nameElement = viewElement.findViewById(R.id.tv_results_name);
             nameElement.setText(calculationResult.getTitle());
             TextView countElement = viewElement.findViewById(R.id.tv_results_count);
