@@ -16,8 +16,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 import ru.kpfu.itis.alliance.R;
+import ru.kpfu.itis.alliance.heatmap.HeatmapActivity;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends HeatmapActivity {
 
     Activity context = this;
     Button toCalculate;
