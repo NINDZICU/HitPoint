@@ -2,24 +2,26 @@ package ru.kpfu.itis.alliance.activities;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
-import android.view.MotionEvent;
+import android.text.Layout;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
+import android.view.ViewParent;
 import android.widget.Button;
-import android.widget.Toast;
 
-import ru.kpfu.itis.alliance.GOD.GodClass;
+import java.util.ArrayList;
+import java.util.List;
+
 import ru.kpfu.itis.alliance.R;
 
 public class MainActivity extends AppCompatActivity {
 
     Activity context = this;
     Button toCalculate;
-    GodClass god = new GodClass();
     Button toCompanyInfo;
-    private int flag = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,7 +31,6 @@ public class MainActivity extends AppCompatActivity {
         Toolbar myToolbar = findViewById(R.id.my_toolbar);
         setSupportActionBar(myToolbar);
 
-
         getSupportActionBar().setDisplayShowTitleEnabled(false);
         getSupportActionBar().setDisplayHomeAsUpEnabled(false);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
@@ -37,11 +38,9 @@ public class MainActivity extends AppCompatActivity {
         toCalculate = findViewById(R.id.calculate);
         toCompanyInfo = findViewById(R.id.company_info);
 
-
         toCompanyInfo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
                 Intent intent = new Intent(context, CompanyInfoActivity.class);
                 startActivity(intent);
                 finish();
@@ -57,22 +56,28 @@ public class MainActivity extends AppCompatActivity {
                 finish();
             }
         });
-    }
 
-    @Override
-    public boolean dispatchTouchEvent(MotionEvent ev) {
+        final View viewElement = getLayoutInflater().inflate(R.layout.activity_main, null, false);
+        ViewParent viewParent = getWindow().getDecorView().findViewById(android.R.id.content);
+        LayoutInflater layoutInflater = getLayoutInflater();
 
-        if (god.isState()) {
-
-
-            god.state = !god.state;
-            if (ev.getAction() == MotionEvent.ACTION_DOWN) {
-                flag++;
-                Toast.makeText(this, Integer.toString(flag), Toast.LENGTH_SHORT).show();
-                return super.dispatchTouchEvent(ev);
-
-            }
+        final ViewGroup viewGroup = (ViewGroup) ((ViewGroup) this.findViewById(android.R.id.content)).getChildAt(0);// вью этого класса
+        List<View> views3 = new ArrayList<>();
+        for (int i = 0; i < viewGroup.getChildCount(); i++) {
+            views3.add(viewGroup.getChildAt(i));
         }
-        return super.dispatchTouchEvent(ev);
+
+//        Layout layout = findViewById(R.layout.activity_main);
+
+        List<View> views = viewElement.getTouchables();
+        List<View> views1 = viewElement.getFocusables(0);
+        for (View view : views) {
+            System.out.println("BULAT  " + view.getId());
+        }
+        for (View view : views1) {
+            System.out.println("BULAT1  " + view.getId());
+        }
     }
+
+
 }
