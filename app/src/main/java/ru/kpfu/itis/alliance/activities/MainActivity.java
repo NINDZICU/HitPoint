@@ -12,8 +12,9 @@ import android.widget.Toast;
 
 import ru.kpfu.itis.alliance.GOD.GodClass;
 import ru.kpfu.itis.alliance.R;
+import ru.kpfu.itis.alliance.heatmap.HeatmapActivity;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends HeatmapActivity {
 
     Activity context = this;
     Button toCalculate;
