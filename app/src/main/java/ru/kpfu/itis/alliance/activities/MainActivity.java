@@ -58,26 +58,7 @@ public class MainActivity extends HeatmapActivity {
             }
         });
 
-        final View viewElement = getLayoutInflater().inflate(R.layout.activity_main, null, false);
-        ViewParent viewParent = getWindow().getDecorView().findViewById(android.R.id.content);
-        LayoutInflater layoutInflater = getLayoutInflater();
 
-        final ViewGroup viewGroup = (ViewGroup) ((ViewGroup) this.findViewById(android.R.id.content)).getChildAt(0);// вью этого класса
-        List<View> views3 = new ArrayList<>();
-        for (int i = 0; i < viewGroup.getChildCount(); i++) {
-            views3.add(viewGroup.getChildAt(i));
-        }
-
-//        Layout layout = findViewById(R.layout.activity_main);
-
-        List<View> views = viewElement.getTouchables();
-        List<View> views1 = viewElement.getFocusables(0);
-        for (View view : views) {
-            System.out.println("BULAT  " + view.getId());
-        }
-        for (View view : views1) {
-            System.out.println("BULAT1  " + view.getId());
-        }
     }
 
 
