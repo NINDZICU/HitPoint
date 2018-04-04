@@ -12,8 +12,9 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import ru.kpfu.itis.alliance.R;
+import ru.kpfu.itis.alliance.heatmap.HeatmapActivity;
 
-public class CompanyInfoActivity extends AppCompatActivity {
+public class CompanyInfoActivity extends HeatmapActivity {
     Activity context = this;
     TextView toolbarTitle;
     Button toSite;

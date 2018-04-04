@@ -29,10 +29,11 @@ import ru.kpfu.itis.alliance.R;
 import ru.kpfu.itis.alliance.ResourceCalculator;
 import ru.kpfu.itis.alliance.allianceAPI.AllianceAPI;
 import ru.kpfu.itis.alliance.allianceAPI.Api;
+import ru.kpfu.itis.alliance.heatmap.HeatmapActivity;
 import ru.kpfu.itis.alliance.models.CalculationResult;
 import ru.kpfu.itis.alliance.models.ResponseSuccess;
 
-public class CalculateActivity extends AppCompatActivity {
+public class CalculateActivity extends HeatmapActivity {
     public static final int CUSTOMER = 1;
     public static final int DESIGNER = 2;
     public static final int EXECUTOR = 3;

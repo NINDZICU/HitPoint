@@ -12,8 +12,9 @@ import android.widget.TextView;
 
 import ru.kpfu.itis.alliance.Constants;
 import ru.kpfu.itis.alliance.R;
+import ru.kpfu.itis.alliance.heatmap.HeatmapActivity;
 
-public class WhoAreActivity extends AppCompatActivity {
+public class WhoAreActivity extends HeatmapActivity {
     private RadioButton rbDesigner;
     private RadioButton rbExecutor;
     private RadioButton rbCustomer;

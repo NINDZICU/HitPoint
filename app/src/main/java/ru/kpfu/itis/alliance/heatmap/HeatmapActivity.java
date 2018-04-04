@@ -10,13 +10,11 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.ViewParent;
-import android.view.WindowManager;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 
-import ru.kpfu.itis.alliance.GOD.CommentaryDialogue;
 import ru.kpfu.itis.alliance.R;
 
 public class HeatmapActivity extends AppCompatActivity {
@@ -79,29 +77,20 @@ public class HeatmapActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
     }
 
-//    @Override
-//    protected void onDestroy() {
-//        mHeatmapHandler.close();
-//        super.onDestroy();
-//    }
+    @Override
+    protected void onDestroy() {
+        mHeatmapHandler.close();
+        super.onDestroy();
+    }
 
     @Override
     public boolean dispatchTouchEvent(MotionEvent ev) {
         if (ev.getAction() == MotionEvent.ACTION_DOWN){
-//            final ViewGroup viewGroup = (ViewGroup) ((ViewGroup) this.findViewById(android.R.id.content)).getChildAt(0);
-//            List<String> ids = findViewsAt(viewGroup, (int) ev.getX(), (int) ev.getY());
-//            for (String id : ids) {
-//                System.err.println("Touch id is:" + id);
-//            }
-            CommentaryDialogue dialogue = new CommentaryDialogue(this);
-            WindowManager.LayoutParams lp = new WindowManager.LayoutParams();
-            lp.copyFrom(dialogue.getWindow().getAttributes());
-            lp.width = WindowManager.LayoutParams.MATCH_PARENT;
-            lp.height = WindowManager.LayoutParams.MATCH_PARENT;
-
-            dialogue.show();
-
-            dialogue.getWindow().setAttributes(lp);
+            final ViewGroup viewGroup = (ViewGroup) ((ViewGroup) this.findViewById(android.R.id.content)).getChildAt(0);
+            List<String> ids = findViewsAt(viewGroup, (int) ev.getX(), (int) ev.getY());
+            for (String id : ids) {
+                System.err.println("Touch id is:" + id);
+            }
         }
         mHeatmapHandler.dispatchTouchEvent(ev);
         return super.dispatchTouchEvent(ev);

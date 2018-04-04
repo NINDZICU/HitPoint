@@ -15,9 +15,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 import ru.kpfu.itis.alliance.R;
+import ru.kpfu.itis.alliance.heatmap.HeatmapActivity;
 import ru.kpfu.itis.alliance.models.CalculationResult;
 
-public class ResultAcitivity extends AppCompatActivity {
+public class ResultAcitivity extends HeatmapActivity {
 
     private TextView tvCountMaterials;
     private TextView toolbarTitle;
