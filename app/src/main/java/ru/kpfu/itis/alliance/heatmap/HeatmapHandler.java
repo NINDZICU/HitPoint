@@ -15,18 +15,18 @@ import java.io.IOException;
 public class HeatmapHandler {
     private static final String TAG = HeatmapHandler.class.getSimpleName();
     private Point mScreenSize;
-    private Storage mStorage;
+//    private Storage mStorage;
     private String mLocalClassName;
 
     public HeatmapHandler(Activity activity) {
         mLocalClassName = activity.getLocalClassName();
 
         // prepare the database
-        try {
-            mStorage = new Storage(activity);
-        } catch (IOException | CouchbaseLiteException e) {
-            Log.e(TAG, "Error creating couchbase storage for storing heatmap.", e);
-        }
+//        try {
+//            mStorage = new Storage(activity);
+//        } catch (IOException | CouchbaseLiteException e) {
+//            Log.e(TAG, "Error creating couchbase storage for storing heatmap.", e);
+//        }
 
         // get the size of the screen for tagging the data
         mScreenSize = new Point();
@@ -36,15 +36,15 @@ public class HeatmapHandler {
     }
 
 
-    public void close() {
-        mStorage.close();
-    }
+//    public void close() {
+//        mStorage.close();
+//    }
 
     public void dispatchTouchEvent(MotionEvent ev) {
         // if error occurred while creating the database
-        if (mStorage == null) {
-            return;
-        }
+//        if (mStorage == null) {
+//            return;
+//        }
 
         // don't record the UP event (when user lifts the finger from the screen)
         if (ev.getAction() == MotionEvent.ACTION_UP) {
@@ -53,10 +53,10 @@ public class HeatmapHandler {
 
 
         Log.d(TAG, "Touch event logged: " + ev);
-        try {
-            mStorage.create(Math.round(ev.getX()), Math.round(ev.getY()), mScreenSize, mLocalClassName);
-        } catch (CouchbaseLiteException e) {
-            Log.e(TAG, "Could not save the data to the database", e);
-        }
+//        try {
+//            mStorage.create(Math.round(ev.getX()), Math.round(ev.getY()), mScreenSize, mLocalClassName);
+//        } catch (CouchbaseLiteException e) {
+//            Log.e(TAG, "Could not save the data to the database", e);
+//        }
     }
 }

@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://C:\Tolya\Univer\Android3course\TestTestInterface\.idea\HitPoint.iml" filepath="C:\Tolya\Univer\Android3course\TestTestInterface\.idea\HitPoint.iml" />
-      <module fileurl="file://$PROJECT_DIR$/TestTestInterface.iml" filepath="$PROJECT_DIR$/TestTestInterface.iml" />
+      <module fileurl="file://$PROJECT_DIR$/HitPoint.iml" filepath="$PROJECT_DIR$/HitPoint.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>

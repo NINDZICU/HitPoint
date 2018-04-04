@@ -10,11 +10,13 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.ViewParent;
+import android.view.WindowManager;
 import android.widget.Button;
 
 import java.util.ArrayList;
 import java.util.List;
 
+import ru.kpfu.itis.alliance.GOD.CommentaryDialogue;
 import ru.kpfu.itis.alliance.R;
 import ru.kpfu.itis.alliance.heatmap.HeatmapActivity;
 
@@ -57,6 +59,7 @@ public class MainActivity extends HeatmapActivity {
                 finish();
             }
         });
+
 
 
     }
