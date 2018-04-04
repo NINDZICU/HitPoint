@@ -14,8 +14,9 @@ import android.widget.TextView;
 
 import ru.kpfu.itis.alliance.Constants;
 import ru.kpfu.itis.alliance.R;
+import ru.kpfu.itis.alliance.heatmap.HeatmapActivity;
 
-public class TypeOfSystemActivity extends AppCompatActivity {
+public class TypeOfSystemActivity extends HeatmapActivity {
     private RadioButton cbComposit;
     private RadioButton cbKeramogranit;
     private RadioButton cbFibroplita;
